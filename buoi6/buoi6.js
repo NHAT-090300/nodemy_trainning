@@ -29,9 +29,14 @@ let sum = array
     .reduce((a,b) => a+b);
 console.log(sum);
 
-
-//câu này em làm chưa được.
 // Tìm ra tích 3 số đầu của mảng array
+console.log('Tìm ra tích 3 số đầu của mảng array')
+let arr1 = [];
+for(i = 0; i < 3; i++) {
+    arr1.push(array[i]);
+    var s1 = arr1.reduce((a,b)=> a*b);
+}
+console.log(s1)
 
 
 // tim trong aray có phần tử nào là số 5 hay không;
@@ -73,6 +78,11 @@ if (array.map(a => a !== 8)){
 }
 
 
-
-//câu này em chưa làm đc
 //tính tổng ba phần tử cuối trong mảng;
+console.log('tính tổng ba phần tử')
+var arr= [];
+for(i = array.length - 3; i < array.length; i++) {
+    arr.push(array[i]);
+    sumlast = arr.reduce((a,b) => a+b);
+}
+console.log(sumlast);
