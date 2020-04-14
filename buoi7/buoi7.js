@@ -35,3 +35,6 @@ console.log(trung)
 
 console.log('đoàn có bằng trung hay ko')
 console.log(doan === trung)
+
+doan === trung ? trung.clone = 'true' : trung.clone = 'false';
+console.log(trung)

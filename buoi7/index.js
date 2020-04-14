@@ -51,8 +51,6 @@ var obj = [
     {name : "vu", tuoi:17 }
 ]
 
-var abj2 = obj.filter((tuoi) => tuoi >10)
-console.log(abj2.name)
 
 
 // Object.assign( {}, ten obj) tạo ra obj mơi, nếu ko có {} giống như obj cũ;
@@ -70,6 +68,7 @@ console.log(obj2)
 
 var person3 = Object.assign(obj2);//nó thay đổi cả giá trị cũ vì ko có {};
 person3.name = 'ha';
-
 console.log(person3)
 console.log(obj2)
+
+person3.tuoi === 19 ? console.log('tuoi của bạn la 19') : console.log('tuoi của ban ko phải là 19');  
