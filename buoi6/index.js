@@ -151,4 +151,4 @@ let obj = {
 	lastName: 'hao',
 	name: 'Họ của tôi là '+ obj1.firstName + ' còn tên của là ' + obj1.lastName
 }
-console.log(obj)
+console.log(obj);
