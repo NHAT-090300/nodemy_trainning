@@ -78,76 +78,93 @@ setTimeout(function() {
 console.log('3');
 */
 
-// console.log(' câu a');
-// console.log('1');
-// setTimeout(function() {
-//     console.log('2');
-// }, 2000);
-// console.log('3');
-// setTimeout(function() {
-//     console.log('4');
-// }, 1000);
+console.log(' câu a');
+console.log('1');
+setTimeout(function() {
+    console.log('2');
+}, 2000);
+console.log('3');
+setTimeout(function() {
+    console.log('4');
+}, 1000);
 
 
-// console.log('câu b');
-// console.log('1');
-// setTimeout(function() {
-//     console.log('2');
-// }, 2000);
-// console.log('3');
-// console.log('4');
+console.log('câu b');
+console.log('1');
+setTimeout(function() {
+    console.log('2');
+}, 2000);
+console.log('3');
+console.log('4');
 
 
-// console.log('câu c');
-// console.log('1');
-// console.log('3');
-// c2();
-// c1();
-// function c1(){
-//     console.log('2');
-// };
-// function c2(){
-//     console.log('4');
-// };
+console.log('câu c');
+console.log('1');
+console.log('3');
+c2();
+c1();
+function c1(){
+    console.log('2');
+};
+function c2(){
+    console.log('4');
+};
 
-// console.log('câu d');
-// d1();
-// console.log('1');
-// function d1(){
-//     console.log('2');
-// }
-// setTimeout(function(){
-//     console.log('3');
-// },1000)
-// console.log('4');
-
-
-
-// console.log('câu e');
-// e1();
-// console.log('1')
-// function e1(){
-//     console.log('2')
-// };
-// setTimeout(function() {
-//     console.log('3');
-//     console.log('4');
-// }, 1000);
+console.log('câu d');
+d1();
+console.log('1');
+function d1(){
+    console.log('2');
+}
+setTimeout(function(){
+    console.log('3');
+},1000)
+console.log('4');
 
 
-// console.log('câu f');
-// f1();
-// console.log('1');
-// function f1(){
-//     console.log('2')
-// }
-// setTimeout(function() {
-//     console.log('3');
-//     console.log('4');
-// }, 2000);
+
+console.log('câu e');
+e1();
+console.log('1')
+function e1(){
+    console.log('2')
+};
+setTimeout(function() {
+    console.log('3');
+    console.log('4');
+}, 1000);
+
+
+console.log('câu f');
+f1();
+console.log('1');
+function f1(){
+    console.log('2')
+}
+setTimeout(function() {
+    console.log('3');
+    console.log('4');
+}, 2000);
 
 
 /*tạo 1 promise 1 trả về resolve là 5
 tạo 1 promise 2 tăng giá trị trị lên 2 lần rồi trả về cho promise 3;
 promise 3 kiểm tra xem kết quả của promise 2 có chia hết cho 2 không
 rồi in ra thông báo*/
+
+
+// bai 1
+let promise = new Promise((resolve, reject) => {
+    // reject(5);
+    resolve(5);
+}).then((result) => {
+    console.log( result );
+    return result * 2;
+}).then((result) => {
+    console.log( result );
+    return result;
+}).then((result) => {
+    result % 5 === 0 ? console.log('chia het cho 5') : console.log('khong chia het cho 5');
+}).catch((err) => {
+    console.log( 'err' );
+})

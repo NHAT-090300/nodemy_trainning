@@ -29,15 +29,33 @@ let promise = new Promise((resolve, reject) => {
 
 // bài 2
 var promise1 = new Promise((resolve, reject) => {
-    setTimeout(resolve,3000, "promise" + 1)
+    // setTimeout(resolve,3000, "promise" + 1)
+    setTimeout( () => {
+        var s = 1;
+        console.log(s);
+        resolve(s);
+    }, 3000)
+
 })
 
 var promise2 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 2000, "promise" + 2)
+    // setTimeout(resolve, 2000, "promise" + 2)
+    setTimeout( () => {
+        var s2 = 2;
+        console.log(s2);
+        resolve(s2);
+    }, 2000)
+
 })
 
 var promise3 = new Promise((resolve, reject) => {
-    setTimeout(reject, 2000, "promise" + 3)
+    // setTimeout(reject, 2000, "promise" + 3)
+    setTimeout( () => {
+        var s3 = 3;
+        console.log(s3);
+        reject(s3);
+    }, 2000)
+
 })
 
 Promise.all([promise1, promise2 , promise3])
@@ -49,21 +67,21 @@ Promise.all([promise1, promise2])
     .catch(err => console.log(err + ' was err'));
 // bài 3
 
-var promise4 = new Promise((resolve, reject) => {
-    var s = 1 + 1;
-    resolve (s);
-}).then((result) => {
-    setTimeout(() => {
-        console.log(result)
-    }, 3000)
-    return result * 3;
-}).then((result) => { 
-    setTimeout(()=> {
-        console.log(result)
-    }, 3000)
-    return result;
-}).then((result)=> { 
-    result > 10 ? console.log('true') : console.log('false');
-})
+// var promise4 = new Promise((resolve, reject) => {
+//     var s = 1 + 1;
+//     resolve (s);
+// }).then((result) => {
+//     setTimeout(() => {
+//         console.log(result)
+//     }, 3000)
+//     return result * 3;
+// }).then((result) => { 
+//     setTimeout(()=> {
+//         console.log(result)
+//     }, 3000)
+//     return result;
+// }).then((result)=> { 
+//     result > 10 ? console.log('true') : console.log('false');
+// })
 
 
