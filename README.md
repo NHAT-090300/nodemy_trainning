@@ -52,15 +52,14 @@ number(1, 2, add);
 ```
 #### scope.
 -`scope` có hai loại
-    -loại 1 là function scope 
+ -loại 1 là function scope 
         function demo() {
             function scope.
         }
-    -loại 2 là block scope
-        ngoại trừ những trường hợp function scope
-        if(){} , for(){} , while (){} ...
-        + let và const phạm vi hoạt động trong block scope re ngoài ko có giá trị.
-        + var thì ngược lại, trong ngoài đều dùng được.
+ -loại 2 là block scope
+   -ngoại trừ những trường hợp function scope if(){} , for(){} , while (){} ...
+     + let và const phạm vi hoạt động trong block scope re ngoài ko có giá trị.
+     + var thì ngược lại, trong ngoài đều dùng được.
 -global scope (toàn bộ chương trình), local scope(chỉ chạy trong một hàm);
 ```
 var number =  true;
